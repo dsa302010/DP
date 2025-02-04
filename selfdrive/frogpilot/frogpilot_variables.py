@@ -583,8 +583,8 @@ class FrogPilotVariables:
     toggle.frogsgomoo_tweak = openpilot_longitudinal and toggle.car_make == "toyota" and (params.get_bool("FrogsGoMoosTweak") if tuning_level >= level["FrogsGoMoosTweak"] else default.get_bool("FrogsGoMoosTweak"))
     toggle.kiBP = [0., CRUISING_SPEED] if toggle.frogsgomoo_tweak else kiBP
     toggle.kiV = [0.25, 0.] if toggle.frogsgomoo_tweak else kiV
-    toggle.stoppingDecelRate = 0.01 if toggle.frogsgomoo_tweak else stoppingDecelRate
-    toggle.vEgoStopping = 0.5 if toggle.frogsgomoo_tweak else vEgoStopping
+    toggle.stoppingDecelRate = 0.015 if toggle.frogsgomoo_tweak else stoppingDecelRate
+    toggle.vEgoStopping = 0.09 if toggle.frogsgomoo_tweak else vEgoStopping
     toggle.vEgoStarting = 0.1 if toggle.frogsgomoo_tweak else vEgoStarting
 
     toggle.holiday_themes = params.get_bool("HolidayThemes") if tuning_level >= level["HolidayThemes"] else default.get_bool("HolidayThemes")
